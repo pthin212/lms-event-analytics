@@ -1,0 +1,241 @@
+-- User Loggedin (Moodle)
+{
+  "eventname": "\\core\\event\\user_loggedin",
+  "component": "core",
+  "action": "loggedin",
+  "target": "user",
+  "objecttable": "user",
+  "objectid": "5",
+  "crud": "r",
+  "edulevel": 0,
+  "contextid": 1,
+  "contextlevel": 10,
+  "contextinstanceid": 0,
+  "userid": "5",
+  "courseid": 0,
+  "relateduserid": null,
+  "anonymous": 0,
+  "other": {
+    "username": "pthin212",
+    "extrauserinfo": []
+  },
+  "timecreated": 1749604223,
+  "host": "thesis-moodle-25-u40452.vm.elestio.app",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjfQ.SflKxwRJSM",
+  "extra": ""
+}
+
+-- User Loggedout (Moodle)
+{
+  "eventname": "\\core\\event\\user_loggedout",
+  "component": "core",
+  "action": "loggedout",
+  "target": "user",
+  "objecttable": "user",
+  "objectid": "5",
+  "crud": "r",
+  "edulevel": 0,
+  "contextid": 1,
+  "contextlevel": 10,
+  "contextinstanceid": 0,
+  "userid": "5",
+  "courseid": 0,
+  "relateduserid": null,
+  "anonymous": 0,
+  "other": {
+    "sessionid": "nu9jo5toho5fiqf4jeitb1q2oc"
+  },
+  "timecreated": 1749604341,
+  "host": "thesis-moodle-25-u40452.vm.elestio.app",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjfQ.SflKxwRJSM",
+  "extra": ""
+}
+
+-- Course Viewed (Moodle)
+{
+  "eventname": "\\core\\event\\course_viewed",
+  "component": "core",
+  "action": "viewed",
+  "target": "course",
+  "objecttable": null,
+  "objectid": null,
+  "crud": "r",
+  "edulevel": 2,
+  "contextid": 2,
+  "contextlevel": 50,
+  "contextinstanceid": "1",
+  "userid": "5",
+  "courseid": "1",
+  "relateduserid": null,
+  "anonymous": 0,
+  "other": null,
+  "timecreated": 1749604711,
+  "host": "thesis-moodle-25-u40452.vm.elestio.app",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjfQ.SflKxwRJSM",
+  "extra": ""
+}
+
+-- Discussion Viewed (Moodle)
+{
+  "eventname": "\\mod_forum\\event\\discussion_viewed",
+  "component": "mod_forum",
+  "action": "viewed",
+  "target": "discussion",
+  "objecttable": "forum_discussions",
+  "objectid": 1,
+  "crud": "r",
+  "edulevel": 2,
+  "contextid": 33,
+  "contextlevel": 70,
+  "contextinstanceid": "7",
+  "userid": "5",
+  "courseid": "7",
+  "relateduserid": null,
+  "anonymous": 0,
+  "other": null,
+  "timecreated": 1749604806,
+  "host": "thesis-moodle-25-u40452.vm.elestio.app",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjfQ.SflKxwRJSM",
+  "extra": ""
+}
+
+-- Charge Succeeded (Stripe)
+{
+  "id": "evt_3RYdJbELqpDMdrAX1Yzyo3dd",
+  "object": "event",
+  "api_version": "2025-04-30.basil",
+  "created": 1749604736,
+  "data": {
+    "object": {
+      "id": "ch_3RYdJbELqpDMdrAX1GyShunG",
+      "object": "charge",
+      "amount": 1200,
+      "amount_captured": 1200,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": "txn_3RYdJbELqpDMdrAX1dryQwDy",
+      "billing_details": {
+        "address": {
+          "city": null,
+          "country": "VN",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "thinhb2110147@student.ctu.edu.vn",
+        "name": "phuc thinh",
+        "phone": null,
+        "tax_id": null
+      },
+      "calculated_statement_descriptor": "Stripe",
+      "captured": true,
+      "created": 1749604736,
+      "currency": "usd",
+      "customer": "cus_SOqziIm2MwEkHr",
+      "description": null,
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {},
+      "livemode": false,
+      "metadata": {
+        "itemid": "29",
+        "lastname": "Phuc",
+        "component": "enrol_fee",
+        "userid": "5",
+        "firstname": "Thinh",
+        "paymentarea": "fee",
+        "username": "pthin212"
+      },
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "advice_code": null,
+        "network_advice_code": null,
+        "network_decline_code": null,
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 30,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3RYdJbELqpDMdrAX10mlUXuM",
+      "payment_method": "pm_1RYdJbELqpDMdrAXeeRnBzZe",
+      "payment_method_details": {
+        "card": {
+          "amount_authorized": 1200,
+          "authorization_code": "156604",
+          "brand": "visa",
+          "checks": {
+            "address_line1_check": null,
+            "address_postal_code_check": null,
+            "cvc_check": "pass"
+          },
+          "country": "US",
+          "exp_month": 12,
+          "exp_year": 2032,
+          "extended_authorization": {
+            "status": "disabled"
+          },
+          "fingerprint": "5g4U7I8ML4r7ZXbq",
+          "funding": "credit",
+          "incremental_authorization": {
+            "status": "unavailable"
+          },
+          "installments": null,
+          "last4": "4242",
+          "mandate": null,
+          "multicapture": {
+            "status": "unavailable"
+          },
+          "network": "visa",
+          "network_token": {
+            "used": false
+          },
+          "network_transaction_id": "531035285557356",
+          "overcapture": {
+            "maximum_amount_capturable": 1200,
+            "status": "unavailable"
+          },
+          "regulated_status": "unregulated",
+          "three_d_secure": null,
+          "wallet": null
+        },
+        "type": "card"
+      },
+      "presentment_details": {
+        "presentment_amount": 324629,
+        "presentment_currency": "vnd"
+      },
+      "radar_options": {},
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUlUzQjVFTHFwRE1kckFYKIGzo8IGMgb1LW95Bts6LBYL6Fbj16n9-U8A_n11vW0BOY3ZyRtafzqPE3-a0wOn3XtQpZ20UYgWnr4q",
+      "refunded": false,
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 1,
+  "request": {
+    "id": null,
+    "idempotency_key": "b98bbe32-a00b-4347-b8ed-7f219b7c47ea"
+  },
+  "type": "charge.succeeded"
+}

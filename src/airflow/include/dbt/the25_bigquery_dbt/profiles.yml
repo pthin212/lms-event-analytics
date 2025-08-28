@@ -1,0 +1,30 @@
+the25_bigquery_dbt:
+  outputs:
+    raw:
+      type: bigquery
+      method: service-account
+      project: thesis-25-456305
+      dataset: raw_layer
+      location: asia-east1
+      keyfile: /tmp/thesis-25-456305-079e7bf41602.json
+      threads: 1
+
+    staging:
+      type: bigquery
+      method: service-account
+      project: thesis-25-456305
+      dataset: staging_layer
+      location: asia-east1
+      keyfile: /tmp/thesis-25-456305-079e7bf41602.json
+      threads: 1
+
+    marts:
+      type: bigquery
+      method: service-account
+      project: thesis-25-456305
+      dataset: mart_layer
+      location: asia-east1
+      keyfile: /tmp/thesis-25-456305-079e7bf41602.json
+      threads: 1
+
+  target: staging

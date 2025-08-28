@@ -1,0 +1,57 @@
+1/ online_bitmap [bitmap]
+SETBIT online_bitmap 5 1
+SETBIT online_bitmap 5 0
+[
+    UserID 4 → 1     # Emma Watson is online
+    UserID 5 → 0     # Alice Lee is offline
+    UserID 7 → 1     # John Doe is online
+]
+
+2/ user:{userid}:login [single value - float]
+SET user:5:login "1749604223"
+[
+    user:4:login → "1749604223"     # Emma Watson logged in at that timestamp
+]
+
+3/ user:{userid}:total_duration [single value - float]
+SET user:5:total_duration "118"
+[
+    user:4:total_duration → "864"          # 864 seconds total active time
+]
+
+4/ user:{userid}:total_duration [single value - float]
+SET user:5:session_count "1"
+[
+    user:4:session_count → "3"             # 3 sessions
+]
+
+5/ course_views_ts [sorted set - score = timestamp]
+ZADD course_views_ts 1749604711 "1:1749604711"
+[
+"2:1749604711" → score: 1749604711     # Course ID 2 viewed at that time
+"3:1749604899" → score: 1749604899     # Course ID 3 viewed later
+]
+
+6/ course_view_trend:{YYYY-MM-DD-HH} [sorted set - score = views]
+ZINCRBY course_view_trend:2025-07-01-08 1 "1"
+[
+"2" → score: 5      # Course ID 2 viewed 5 times during hour 08
+"3" → score: 3      # Course ID 3 viewed 3 times
+]
+
+7/ discussion_views_ts [sorted set - score = timestamp]
+ZADD discussion_views_ts 1749604806 "1:1749604806"
+[
+"1:1749604806" → score: 1749604806     # Discussion ID 1 viewed at that time
+"5:1749604891" → score: 1749604891     # Discussion ID 5 viewed later
+]
+
+8/ user_names, course_names, discussion_titles user_names [hash map]
+HSET user_names 5 "Phuc Thinh"
+HSET course_names 1 "Big Data 101"
+HSET discussion_titles 1 "Spark Discussion 101"
+[
+"4" → "Emma Watson"
+"2" → "Introduction to Big Data"
+"1" → "Is Spark better than Flink?"
+]

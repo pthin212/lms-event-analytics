@@ -1,0 +1,5 @@
+configparser==7.1.0
+dnspython==2.7.0
+kafka-python==2.0.6
+pymongo==4.11.2
+PyYAML==6.0.2
